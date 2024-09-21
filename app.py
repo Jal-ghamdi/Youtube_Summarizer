@@ -34,9 +34,7 @@ def youtube_transcriber(video_url):
 st.set_page_config(page_title="Youtube Summarizer App")
 st.header("Youtube Summarizer App!")
 file = st.text_input("Your Youtube link here...")
-if file:
-    video_id = file.split("=")[1]
-    st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", caption="Uploaded Youtube.", use_column_width=True)
+
 if st.button("Summarize"):
     transcript = youtube_transcriber(file)
     if transcript:
